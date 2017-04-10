@@ -19,12 +19,34 @@
 	</head>
 	<body>
 
-		<h1>Hello World !</h1>
-
 		<div class="container" ng-app="scheduleApp" ng-controller="mainController">
 			            
-			    <h2>{{ data.chambre1.Heure }}</h2>      
-			    
+			    <b>{{ data.chambre1.Type }}</b>
+			    <ul>
+			    	<li>Heure : {{ data.chambre1.Heure}}</li>
+			    	<li>Temperature : {{ data.chambre1.Temperature}}</li>
+			    	<li>Humidité : {{ data.chambre1.Humidite}}</li>
+			    	<li>Présence : {{ data.chambre1.Presence}}</li>
+			    	<li>Porte : {{ data.chambre1.Porte}}</li> 
+			    </ul>
+
+			    <b>{{ data.chambre2.Type }}</b>
+			    <ul>
+			    	<li>Heure : {{ data.chambre2.Heure}}</li>
+			    	<li>Temperature : {{ data.chambre2.Temperature}}</li>
+			    	<li>Humidité : {{ data.chambre2.Humidite}}</li>
+			    	<li>Présence : {{ data.chambre2.Presence}}</li>
+			    	<li>Porte : {{ data.chambre2.Porte}}</li> 
+			    </ul>
+
+			    <b>{{ data.chambre3.Type }}</b>
+			    <ul>
+			    	<li>Heure : {{ data.chambre3.Heure}}</li>
+			    	<li>Temperature : {{ data.chambre3.Temperature}}</li>
+			    	<li>Humidité : {{ data.chambre3.Humidite}}</li>
+			    	<li>Présence : {{ data.chambre3.Presence}}</li>
+			    	<li>Porte : {{ data.chambre3.Porte}}</li> 
+			    </ul>
 		</div>
 	</body>
 </html>
