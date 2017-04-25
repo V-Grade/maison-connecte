@@ -1,52 +1,52 @@
-<!doctype html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<title>test</title>
+<!DOCTYPE html>
 
-		<!-- Angular -->
-    	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+<!-- define angular app -->
+<html ng-app="scotchApp">
 
-    	<!-- Firebase -->
-    	<script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
-    	<!-- AngularFire -->
-    	<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
-		<!--<script src="firebase-config.js"></script>-->
-		<script src="firebase-config.js"></script>
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
 
-	</head>
-	<body>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 
-		<div class="container" ng-app="scheduleApp" ng-controller="mainController">
-			            
-			    <b>{{ data.chambre1.Type }}</b>
-			    <ul>
-			    	<li>Heure : {{ data.chambre1.Heure}}</li>
-			    	<li>Temperature : {{ data.chambre1.Temperature}}</li>
-			    	<li>Humidité : {{ data.chambre1.Humidite}}</li>
-			    	<li>Présence : {{ data.chambre1.Presence}}</li>
-			    	<li>Porte : {{ data.chambre1.Porte}}</li> 
-			    </ul>
+  <script src="script.js"></script>
+</head>
 
-			    <b>{{ data.chambre2.Type }}</b>
-			    <ul>
-			    	<li>Heure : {{ data.chambre2.Heure}}</li>
-			    	<li>Temperature : {{ data.chambre2.Temperature}}</li>
-			    	<li>Humidité : {{ data.chambre2.Humidite}}</li>
-			    	<li>Présence : {{ data.chambre2.Presence}}</li>
-			    	<li>Porte : {{ data.chambre2.Porte}}</li> 
-			    </ul>
+<!-- define angular controller -->
+<body ng-controller="mainController">
 
-			    <b>{{ data.chambre3.Type }}</b>
-			    <ul>
-			    	<li>Heure : {{ data.chambre3.Heure}}</li>
-			    	<li>Temperature : {{ data.chambre3.Temperature}}</li>
-			    	<li>Humidité : {{ data.chambre3.Humidite}}</li>
-			    	<li>Présence : {{ data.chambre3.Presence}}</li>
-			    	<li>Porte : {{ data.chambre3.Porte}}</li> 
-			    </ul>
-		</div>
-	</body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Projet Maison Connectée</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Salle</a></li>
+        <li><a href="#piece2"><i class="fa fa-shield"></i> Cuisine</a></li>
+        <li><a href="#piece3"><i class="fa fa-comment"></i> Chambre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+</body>
+
 </html>
