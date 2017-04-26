@@ -1,4 +1,4 @@
-	// create the module and name it scotchApp
+	// create the module and name it scotchApp, ngRoute et firebase sont des dépendances
 	var scotchApp = angular.module('scotchApp', ['ngRoute','firebase']);
 
 	// configure our routes
@@ -15,13 +15,13 @@
 			// route for the about page
 			.when('/piece2', {
 				templateUrl : 'pages/piece2.html',
-				controller  : 'aboutController'
+				controller  : 'mainController'
 			})
 
 			// route for the contact page
 			.when('/piece3', {
 				templateUrl : 'pages/piece3.html',
-				controller  : 'contactController'
+				controller  : 'mainController'
 			});
 	});
 
@@ -29,23 +29,15 @@
 	scotchApp.controller('mainController', function($scope, $firebase) {
 		// create a message to display in our view
 		//$scope.message = 'Everyone come and see how good I look!';
-		 // connect to firebase 
-		 var ref = new Firebase("https://projet-maison-co-test.firebaseio.com/data");  
-		 var fb = $firebase(ref);
+		// connect to firebase 
+		var ref = new Firebase("https://projet-maison-co-test.firebaseio.com/data");  
+		var fb = $firebase(ref);
 
 		// sync as object 
 		var syncObject = fb.$asObject();
 
 		// three way data binding
 		syncObject.$bindTo($scope, 'data');
-	});
-
-	scotchApp.controller('aboutController', function($scope) {
-		$scope.message = 'Look! I am an about page.';
-	});
-
-	scotchApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
 	});
 
 

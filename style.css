@@ -1,0 +1,30 @@
+.jumbotron {
+	max-width: 100vw;
+	margin: 10px;
+}
+
+.navbar-nav li {
+	display: inline-block !important;
+}
+
+.navbar-nav {
+	margin: 0;
+}
+
+#redblock:focus {
+	background-color: red;
+}
+
+#redblock2:focus {
+	background-color: red;
+}
+
+#redblock3:focus {
+	background-color: red;
+}
+
+.navbar-default{
+	border-bottom-width: 5px;
+	border-bottom-color: red;
+	margin: 0;
+}
