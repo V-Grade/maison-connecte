@@ -21,20 +21,20 @@ while True:
 
 
         try:
-        		# Get sensor value
-        		sensor_value = grovepi.analogRead(light_sensor)
+        	# Get sensor value
+        	sensor_value = grovepi.analogRead(light_sensor)
 
-        		print("sensor_value = %d" %(sensor_value))
-        		time.sleep(.5)
+        	print("sensor_value = %d" %(sensor_value))
+        	time.sleep(.5)
 
     	except IOError:
-        		print ("Error")
+        	print ("Error")
 
-		#Creation de la data
-		data = {'Temperature': temp, 'Humidite': hum, 'Presence': "oui", 'Volet': "ouvert",'Heure': time.strftime("%H:%M:%S")}
-		#Envoie de la donnee et recuperation des donnees formater JSON
-		result = firebase.patch('/data/salle', data)
-		#Affichage de la donnee Value
+	#Creation de la data
+	data = {'Temperature': temp, 'Humidite': hum, 'Presence': "oui", 'Volet': "ouvert",'Heure': time.strftime("%H:%M:%S")}
+	#Envoie de la donnee et recuperation des donnees formater JSON
+	result = firebase.patch('/data/salle', data)
+	#Affichage de la donnee Value
 
 		data = {'Temperature': 15, 'Humidite': 34, 'Presence': "non", 'Volet': "fermé", 'Heure': time.strftime("%H:%M:%S")}
 
