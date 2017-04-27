@@ -15,7 +15,8 @@ while True:
         try:
                 [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)
                 print("temp =", temp, "C\thumidity =", hum,"%")
-
+		time.sleep(.5)
+		
         except (IOError,TypeError) as e:
                 print("Error")
 
