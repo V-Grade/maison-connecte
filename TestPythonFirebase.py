@@ -12,7 +12,7 @@ data = {'Temperature': 19, 'Humidite': 42, 'Presence': "oui", 'Volet': "ouvert",
 result = firebase.patch('/data/salle', data)
 #Affichage de la donnee Value
 
-data = {'Temperature': 15, 'Humidite': 34, 'Presence': "non", 'Volet': "fermé", 'Heure': time.strftime("%H:%M:%S")}
+data = {'Temperature': 15, 'Humidite': 34, 'Presence': "non", 'Volet': "ferme", 'Heure': time.strftime("%H:%M:%S")}
 
 result = firebase.patch('/data/cuisine', data)
 
