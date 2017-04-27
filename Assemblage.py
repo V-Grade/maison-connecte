@@ -9,6 +9,7 @@ firebase = firebase.FirebaseApplication(URL)
 
 dht_sensor_port = 7
 dht_sensor_type = 0
+ultrasonic_ranger = 3
 light_sensor = 0
 
 while True:
@@ -30,6 +31,15 @@ while True:
 
     	except IOError:
         	print ("Error")
+		
+	try:
+        	# Read distance value from Ultrasonic
+        	print(grovepi.ultrasonicRead(ultrasonic_ranger))
+
+	except TypeError:
+		print ("Error")
+	except IOError:
+		print ("Error")
 
 	#Creation de la data
 	data = {'Temperature': temp, 'Humidite': hum, 'Presence': "oui", 'Volet': "ouvert",'Heure': time.strftime("%H:%M:%S")}
