@@ -11,6 +11,7 @@ firebase = firebase.FirebaseApplication(URL)
 dht_sensor_port = 7
 dht_sensor_type = 0
 light_sensor = 0
+presence = "oui"
 
 while True:
         try:
@@ -27,13 +28,18 @@ while True:
                 [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)		#Get the temperature and Humidity from the DHT sensor
                 print("temperature =", temp, "humidity =", hum,"%") 
                 time.sleep(.5)
-
+	#Ultrasonic
+		print(grovepi.ultrasonicRead(ultrasonic_ranger))
+		 if ultrasonic_ranger > 50:
+			presence = "non"
+		else:
+			presence = "oui"
 		
         except (IOError,TypeError) as e:
                 print("Error")
 
 	#Creation de la data
-	data = {'Temperature': temp, 'Humidite': hum, 'Presence': "oui", 'Volet': "ouvert", 'Exterieur' : sensor_value, 'Heure': time.strftime("%H:%M")}
+	data = {'Temperature': temp, 'Humidite': hum, 'Presence': presence, 'Volet': "ouvert", 'Exterieur' : sensor_value, 'Heure': time.strftime("%H:%M")}
 	#Envoie de la donnee et recuperation des donnees formater JSON
 	result = firebase.patch('/data/salle', data)
 	#Affichage de la donnee Value
