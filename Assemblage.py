@@ -12,6 +12,10 @@ dht_sensor_port = 7
 dht_sensor_type = 0
 light_sensor = 0
 presence = "oui"
+led = 4
+
+pinMode(led,"OUTPUT")
+time.sleep(1)
 
 while True:
         try:
@@ -34,6 +38,11 @@ while True:
 			presence = "non"
 		else:
 			presence = "oui"
+		
+		if sensor_value = "Nuit" and presence = "oui"
+			digitalWrite(led,1)
+		else:
+			digitalWrite(led,0)
 		
         except (IOError,TypeError) as e:
                 print("Error")
