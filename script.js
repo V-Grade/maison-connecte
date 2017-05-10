@@ -15,7 +15,7 @@ scotchApp.config(function($routeProvider) {
 		// route for the about page
 		.when('/piece2', {
 			templateUrl : 'pages/piece2.html',
-			controller  : 'mainController'
+			controller  : 'testController'
 		})
 
 		// route for the contact page
@@ -38,6 +38,17 @@ scotchApp.controller('mainController', function($scope, $firebase) {
 
 	// three way data binding
 	syncObject.$bindTo($scope, 'data');
+
+	
 });
+scotchApp.controller('testController', function($scope) {
+	var data = [
+	  {
+	    x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
+	    y: [1, 3, 6],
+	    type: 'scatter'
+	  }
+	];
 
-
+	Plotly.newPlot('myDiv', data);
+});
