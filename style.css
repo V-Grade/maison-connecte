@@ -11,20 +11,53 @@
 	margin: 0;
 }
 
-#redblock:focus {
-	background-color: red;
-}
-
-#redblock2:focus {
-	background-color: red;
-}
-
-#redblock3:focus {
-	background-color: red;
-}
-
-.navbar-default{
-	border-bottom-width: 5px;
-	border-bottom-color: red;
+.navbar-default {
+	border-bottom-width: 1px;
+    border-bottom-color: #999;
 	margin: 0;
 }
+
+.block {
+	border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #e7e7e7;
+    border-bottom: 1px solid #999;
+    margin: 10px;
+    background-color: #fafafa;
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 1px 1px 0px #e7e7e7;
+}
+
+.row-fluid {
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 825px;
+}
+
+.fa-cutlery {
+	font-size: 28px;
+}
+
+.fa-bed {
+	font-size: 28px;
+}
+
+.fa-coffee {
+	font-size: 28px;
+}
+
+h1 {
+	display: inline-block;
+	margin: 10px;
+}
+
+.block-content {
+	background-color: white;
+    height: 195px;
+    padding: 10px;
+    border-top: 1px solid #e7e7e7;
+}
+
