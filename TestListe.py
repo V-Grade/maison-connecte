@@ -20,7 +20,7 @@ while True:
 				liste1.append(47)
 				liste1.append(time.strftime("%H:%M:%S"))
 				print(liste1)
-				data = {'liste 1' : liste1}
+				data = {'liste1' : liste1}
 				result = firebase.patch('/data/graph', data)
 				liste1 = []
 
@@ -33,7 +33,7 @@ while True:
 				liste2.append(48)
 				liste2.append(time.strftime("%H:%M:%S"))
 				print(liste2)
-				data = {'liste 2' : liste2}
+				data = {'liste2' : liste2}
 				result = firebase.patch('/data/graph', data)
 				liste2 = []
 			else:
@@ -45,7 +45,7 @@ while True:
 				liste3.append(49)
 				liste3.append(time.strftime("%H:%M:%S"))
 				print(liste3)
-				data = {'liste 3' : liste3}
+				data = {'liste3' : liste3}
 				result = firebase.patch('/data/graph', data)
 				liste3 = []
 			else:
@@ -57,7 +57,7 @@ while True:
 				liste4.append(50)
 				liste4.append(time.strftime("%H:%M:%S"))
 				print(liste4)
-				data = {'liste 4' : liste4}
+				data = {'liste4' : liste4}
 				result = firebase.patch('/data/graph', data)
 				liste4 = []
 			else:
@@ -69,7 +69,7 @@ while True:
 				liste5.append(51)
 				liste5.append(time.strftime("%H:%M:%S"))
 				print(liste5)
-				data = {'liste 5' : liste5}
+				data = {'liste5' : liste5}
 				result = firebase.patch('/data/graph', data)
 				liste5 = []
 			else:
