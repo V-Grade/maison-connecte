@@ -5,6 +5,8 @@ body {
 .jumbotron {
 	max-width: 100vw;
 	margin: 10px;
+    background-color: #fafafa;
+    padding: 0;
 }
 
 .navbar {
@@ -27,12 +29,12 @@ body {
 	border-radius: 2px;
 }
 
-.navbar-default .navbar-brand {
-	color: white !important;
+a {
+    color: white !important;
 }
 
-.navbar-default .navbar-nav>li>a {
-	color: white !important;
+a:hover {
+    color: #e75753 !important;
 }
 
 .block1 {
@@ -46,7 +48,21 @@ body {
     width: 250px;
     display: inline-block;
     text-align: center;
-    box-shadow: 1px 1px 0px #e7e7e7;
+    box-shadow: 1px 1px 0px #fafafa;
+}
+
+.block1:hover
+{
+    box-shadow: 0px 0px 50px #000000;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+    z-index: 10000;
 }
 
 .block2 {
@@ -61,6 +77,20 @@ body {
     display: inline-block;
     text-align: center;
     box-shadow: 1px 1px 0px #e7e7e7;
+}
+
+.block2:hover
+{
+    box-shadow: 0px 0px 50px #000000;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+
 }
 
 .row-fluid {
@@ -114,6 +144,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     width: 390px;
     float: left;
+    padding-top: 5px;
 }
 
 .statut2 {
@@ -130,8 +161,57 @@ h1 {
     font-family: 'Roboto', sans-serif;
     width: 390px;
     float: right;
+    padding-top: 5px;
 }
 
 .statut p {
 	margin-top: 5px;
+}
+
+.graphblock1 {
+    border: 1px solid #e7e7e7;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e75753;
+}
+
+.graphblock1 h1 {
+    font-size: 28px;
+}
+
+.graphblock2 {
+    border: 1px solid #e7e7e7;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: #509892;
+}
+
+.graphblock2 h1 {
+    font-size: 28px;
+}
+
+.main-svg {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.draglayer {
+    width: 500px;
+}
+
+.link:hover {
+    color: grey;
 }

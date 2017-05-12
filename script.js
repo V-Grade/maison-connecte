@@ -7,19 +7,19 @@ scotchApp.config(function($routeProvider) {
 	$routeProvider
 
 		// route for the home page
-		.when('/', {
+		.when('/pieces', {
 			templateUrl : 'pages/piece1.html',
 			controller  : 'mainController'
 		})
 
 		// route for the about page
-		.when('/piece2', {
+		.when('/graphes', {
 			templateUrl : 'pages/piece2.html',
 			controller  : 'testController'
 		})
 
 		// route for the contact page
-		.when('/piece3', {
+		.when('/historique', {
 			templateUrl : 'pages/piece3.html',
 			controller  : 'mainController'
 		});
@@ -51,4 +51,6 @@ scotchApp.controller('testController', function($scope) {
 	];
 
 	Plotly.newPlot('myDiv', data);
+	Plotly.newPlot('myDiv2', data);
+	Plotly.newPlot('myDiv3', data);
 });
