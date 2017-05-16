@@ -11,17 +11,21 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- SPELLS -->
+  <!-- AngularJS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
   <!-- Firebase -->
   <script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
 
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 
-  <script src="script.js"></script>
+  <!-- Application -->
+  <script src="app/script.js"></script>
+  <script src="app/tempcontroller.js"></script>
+  <script src="app/humcontroller.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
@@ -37,7 +41,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#pieces" class="link"><i class="fa fa-home"></i> Pièces</a></li>
         <li><a href="#graphes" class="link"><i class="fa fa-bar-chart"></i> Graphes</a></li>
-        <li><a href="#historique" class="link"><i class="fa fa-history"></i> Historique</a></li>
       </ul>
     </div>
   </nav>
@@ -47,7 +50,7 @@
     <!-- angular templating -->
 		<!-- this is where content will be injected -->
     <div ng-view></div>
-    
+
   </div>
   
 </body>
