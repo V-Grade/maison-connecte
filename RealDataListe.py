@@ -29,33 +29,30 @@ liste_chambre3 = []
 liste_chambre4 = []
 liste_chambre5 = []
 
-dht_sensor_port_salle = 7 # Connect the DHt sensor to port D7
+dht_sensor_port_salle = 5 # Connect the DHt sensor to port D5
 dht_sensor_type_salle = 0
 
-dht_sensor_port_cuisine = 5 # Connect the DHt sensor to port D5
+dht_sensor_port_cuisine = 6 # Connect the DHt sensor to port D6
 dht_sensor_type_cuisine = 0
 
-dht_sensor_port_chambre = 6 # Connect the DHt sensor to port D6
+dht_sensor_port_chambre = 8 # Connect the DHt sensor to port D8
 dht_sensor_type_chambre = 0
 
 while True:
-		        try:
-                    
-                    #Get temp and hum salle
-                    [ temp_salle,hum_salle ] = dht(dht_sensor_port_salle,dht_sensor_type_salle)
-                    time.sleep(.2)
+    try:
+        #Get temp and hum salle
+        [ temp_salle,hum_salle ] = dht(dht_sensor_port_salle,dht_sensor_type_salle)
+        time.sleep(.2)
 
-                    #Get temp and hum cuisine
-                    [ temp_cuisine,hum_cuisine ] = dht(dht_sensor_port_cuisine,dht_sensor_type_cuisine)
-                    time.sleep(.2)
+        #Get temp and hum cuisine
+        [ temp_cuisine,hum_cuisine ] = dht(dht_sensor_port_cuisine,dht_sensor_type_cuisine)
+        time.sleep(.2)
 
-                    #Get temp and hum chambre
-                    [ temp_chambre,hum_chambre ] = dht(dht_sensor_port_chambre,dht_sensor_type_chambre) 
-                    time.sleep(.2)
-                
+        #Get temp and hum chambre
+        [ temp_chambre,hum_chambre ] = dht(dht_sensor_port_chambre,dht_sensor_type_chambre)
+        time.sleep(.2)
         #Send salle / cuisine / chambre data to graph on firebase
-		    if time.strftime("%H:%M:%S") == time.strftime("%H:%M:00"): #liste 1
-
+        if time.strftime("%H:%M:%S") == time.strftime("%H:%M:00"): #liste 1
             liste_salle1.append(temp_salle)
             liste_cuisine1.append(temp_cuisine)
             liste_chambre1.append(temp_chambre)
@@ -78,10 +75,10 @@ while True:
             liste_cuisine1 = []
             liste_chambre1 = []
 
-		    else:
-				    time.sleep(.1)
+        else:
+            time.sleep(.1)
 
-		    if time.strftime("%H:%M:%S") == time.strftime("%H:%M:10"): #liste 2
+	if time.strftime("%H:%M:%S") == time.strftime("%H:%M:10"): #liste 2
 
             liste_salle2.append(temp_salle)
             liste_cuisine2.append(temp_cuisine)
@@ -104,11 +101,10 @@ while True:
             liste_salle2 = []
             liste_cuisine2 = []
             liste_chambre2 = []
-		    else:
-				    time.sleep(.1)
+        else:
+            time.sleep(.1)
 
-		    if time.strftime("%H:%M:%S") == time.strftime("%H:%M:20"): #liste 3
-
+	if time.strftime("%H:%M:%S") == time.strftime("%H:%M:20"): #liste 3
             liste_salle3.append(temp_salle)
             liste_cuisine3.append(temp_cuisine)
             liste_chambre3.append(temp_chambre)
@@ -130,10 +126,10 @@ while True:
             liste_salle3 = []
             liste_cuisine3 = []
             liste_chambre3 = []
-		    else:
-				    time.sleep(.1)
+	else:
+            time.sleep(.1)
 
-		    if time.strftime("%H:%M:%S") == time.strftime("%H:%M:30"): #liste 4
+	if time.strftime("%H:%M:%S") == time.strftime("%H:%M:30"): #liste 4
 
             liste_salle4.append(temp_salle)
             liste_cuisine4.append(temp_cuisine)
@@ -156,10 +152,10 @@ while True:
             liste_salle4 = []
             liste_cuisine4 = []
             liste_chambre4 = []
-		    else:
-				    time.sleep(.1)
+        else:
+            time.sleep(.1)
 
-		    if time.strftime("%H:%M:%S") == time.strftime("%H:%M:40"): #liste 5
+	if time.strftime("%H:%M:%S") == time.strftime("%H:%M:40"): #liste 5
 
             liste_salle5.append(temp_salle)
             liste_cuisine5.append(temp_cuisine)
@@ -182,8 +178,8 @@ while True:
             liste_salle5 = []
             liste_cuisine5 = []
             liste_chambre5 = []
-		    else:
-				    time.sleep(.1)
+        else:
+            time.sleep(.1)
 
-		except (IOError,TypeError) as e:
-			print("Error")
+    except (IOError,TypeError) as e:
+        print("Error")
